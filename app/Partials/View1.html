@@ -1,0 +1,20 @@
+<div class="container">
+
+  Number of Students: {{students.length}}<br/>
+
+  <h3>Looping using ng-repeat</h3>
+  <input type="text" ng-model="name" />
+  <ul>
+    <li ng-repeat="student in students | filter:name | orderBy:'name'"> {{ student.name | uppercase }} - {{student.city}}
+  </ul>
+
+Student Name:<br />
+<input type="text" ng-model="newStudent.name" /><br>
+Student City:<br />
+<input type="text" ng-model="newStudent.city" /><br>
+
+<button ng-click="addStudent()"> Add Student </button>
+
+</div>
+
+<a href="#/view2">To View 2</a>
